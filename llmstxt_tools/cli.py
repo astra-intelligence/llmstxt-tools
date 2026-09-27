@@ -34,6 +34,8 @@ def cmd_check(args):
     if not result.get("exists"):
         print(f"\n  ✗ No llms.txt found at {result.get('url', '')}")
         print(f"    HTTP {result.get('status')}: {result.get('message', '')}")
+        print(f"\n  Generate one from your sitemap: llmstxt generate --sitemap <url>")
+        print(f"  Premium license: {GUMROAD_PRODUCT_URL}")
         return
     
     url = result.get("url", "")
@@ -54,6 +56,11 @@ def cmd_check(args):
     for check in result.get("checks", []):
         mark = "✓" if check["pass"] else "✗"
         print(f"  {mark} {check['check']}: {check['detail']}")
+    
+    if score < 100:
+        print(f"\n  💡 Want to see how other sites handle this? Generate your own llms.txt:")
+        print(f"     llmstxt generate --sitemap <your-sitemap-url>  (premium)")
+        print(f"     {GUMROAD_PRODUCT_URL}")
 
 
 def cmd_validate(args):
