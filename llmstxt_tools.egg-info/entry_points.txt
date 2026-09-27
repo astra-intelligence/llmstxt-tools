@@ -1,0 +1,2 @@
+[console_scripts]
+llmstxt = llmstxt_tools.cli:main
