@@ -60,3 +60,6 @@ Get a premium license: https://grantshatz.gumroad.com/l/llmstxt-pro
 ## License
 
 MIT
+---
+
+Free **GitHub profile stats card** generator (stars, languages, followers): [GitHub Stats Card](https://167.233.135.161:8083)
